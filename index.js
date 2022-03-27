@@ -22,7 +22,7 @@ const mypassword = 'pass'
 var session;
 
 app.get('/', (req, res) => {
-    
+    session = req.session;
     if (session.userid) {
         res.send(`Welcome User <a href=\ '/logout'>click to logout</a>`);
     } else
